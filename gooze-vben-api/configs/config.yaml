@@ -1,0 +1,48 @@
+app:
+  name: gooze-cli
+  env: debug
+  addr: ":18168"
+  timeout: 1
+  routerPrefix: api/v1
+databases:
+  - name: master
+    driver: mysql
+    dsn: root:123456@tcp(127.0.0.1:3307)/gooze?charset=utf8&parseTime=True&loc=Local&timeout=5s
+    useGorm: true
+    remark: 以下配置是可选的，而且有些Driver是不支持有些配置的，如果没有配置，则使用默认配置
+    logLevel: 3
+    enableLogWriter: false
+    maxIdleConn: 10
+    maxConn: 200
+    slowThreshold: 2
+redis:
+  addr: "127.0.0.1:6379"
+  password: ""
+  db: 0
+  isCluster: false
+mongo:
+  url: mongodb://admin:123123@192.168.0.13:27017/?minPoolSize=5&maxPoolSize=35&maxIdleTimeMS=30000
+log:
+  remark: 日志的所有配置都是可选的，都有默认配置，可以先看一下下面关于配置的解释
+  path: ./logs/
+  mode: both
+  logrotate: false
+  recover: true
+  maxSize: 1
+  maxBackups: 3
+  maxAge: 1
+  compress: true
+jwt:
+  secretKey: 123456
+  expire: 86400
+casbin:
+  modePath: ""
+  remark: 当你使用了多个数据库时，需要指定一个数据库名，只有一个时，可以忽略这个配置
+  dbName: mysql
+oss:
+  type: local
+  savePath: ./static/resource/
+  url: "http://192.168.0.122:18168"
+  accessKey: ""
+  secretKey: ""
+  bucketName: ""

@@ -1,0 +1,919 @@
+
+openapi: 3.0.0
+info:
+  title: System
+  version: "1.0"
+paths:
+  /api/add:
+    post:
+      summary: ApiAdd
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertApiReq'
+      responses:
+        '200':
+          description: OK
+  /api/list:
+    get:
+      summary: ApiList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApiListReq'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiListResp'
+  /api/update/:id:
+    put:
+      summary: ApiUpdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertApiReq'
+      responses:
+        '200':
+          description: OK
+  /api/delete/:id:
+    delete:
+      summary: ApiDelete
+      responses:
+        '200':
+          description: OK
+  /dict/add:
+    post:
+      summary: DictAdd
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertDictReq'
+      responses:
+        '200':
+          description: OK
+  /dict/list:
+    get:
+      summary: DictList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DictListReq'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DictListResp'
+  /dict/update/:id:
+    put:
+      summary: DictUpdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertDictReq'
+      responses:
+        '200':
+          description: OK
+  /dict/delete/:id:
+    delete:
+      summary: DictDelete
+      responses:
+        '200':
+          description: OK
+  /menu/router:
+    get:
+      summary: MenuRouter
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuResp'
+  /menu/tree:
+    get:
+      summary: MenuTree
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuTreeReq'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuResp'
+  /menu/add:
+    post:
+      summary: MenuAdd
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuInfo'
+      responses:
+        '200':
+          description: OK
+  /menu/update/:id:
+    put:
+      summary: MenuUpdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuInfo'
+      responses:
+        '200':
+          description: OK
+  /menu/info/:id:
+    get:
+      summary: MenuInfo
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuInfo'
+  /menu/delete/:id:
+    delete:
+      summary: MenuDelete
+      responses:
+        '200':
+          description: OK
+  /record/list:
+    get:
+      summary: RecordList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RecordListReq'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecordListResp'
+  /record/delete/:id:
+    delete:
+      summary: RecordDelete
+      responses:
+        '200':
+          description: OK
+  /role/add:
+    post:
+      summary: RoleAdd
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertRoleReq'
+      responses:
+        '200':
+          description: OK
+  /role/list:
+    get:
+      summary: RoleList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RoleListReq'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RoleListResp'
+  /role/info/:id:
+    get:
+      summary: RoleInfo
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RoleInfoResp'
+  /role/update/:id:
+    put:
+      summary: RoleUpdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertRoleReq'
+      responses:
+        '200':
+          description: OK
+  /role/assign/:id:
+    put:
+      summary: RoleAssign
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssignRoleReq'
+      responses:
+        '200':
+          description: OK
+  /role/delete/:id:
+    delete:
+      summary: RoleDelete
+      responses:
+        '200':
+          description: OK
+  /user/info:
+    get:
+      summary: UserInfo
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserInfoResp'
+  /user/add:
+    post:
+      summary: UserAdd
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertUserReq'
+      responses:
+        '200':
+          description: OK
+  /user/list:
+    get:
+      summary: UserList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserListReq'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserListResp'
+  /user/update/:id:
+    put:
+      summary: UserUpdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertUserReq'
+      responses:
+        '200':
+          description: OK
+  /user/delete/:id:
+    delete:
+      summary: UserDelete
+      responses:
+        '200':
+          description: OK
+
+components:
+  schemas:
+    ApiInfoResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        parentId:
+          type: integer
+          description: ""
+        description:
+          type: string
+          description: ""
+        method:
+          type: string
+          description: ""
+        path:
+          type: string
+          description: ""
+        createdAt:
+          type: integer
+          description: ""
+        children:
+          type: array
+          description: ""
+      required:
+    ApiListReq:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: ""
+        pageSize:
+          type: integer
+          description: ""
+        description:
+          type: string
+          description: ""
+        path:
+          type: string
+          description: ""
+        onlyParent:
+          type: boolean
+          description: ""
+      required:
+    ApiListResp:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: ""
+        items:
+          type: object
+          description: ""
+      required:
+    AssignRoleReq:
+      type: object
+      properties:
+        authId:
+          type: array
+          description: ""
+        apiId:
+          type: array
+          description: ""
+      required:
+        - authId
+        - apiId
+    DictInfoResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        dictName:
+          type: string
+          description: ""
+        dictType:
+          type: string
+          description: ""
+        itemKey:
+          type: string
+          description: ""
+        itemValue:
+          type: string
+          description: ""
+        sort:
+          type: integer
+          description: ""
+        remark:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+        createdAt:
+          type: integer
+          description: ""
+      required:
+    DictListReq:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: ""
+        pageSize:
+          type: integer
+          description: ""
+        dictName:
+          type: string
+          description: ""
+        dictType:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+      required:
+    DictListResp:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: ""
+        items:
+          type: object
+          description: ""
+      required:
+    LoginReq:
+      type: object
+      properties:
+        username:
+          type: string
+          description: ""
+        password:
+          type: string
+          description: ""
+      required:
+        - username
+        - password
+    LoginResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        password:
+          type: string
+          description: ""
+        realName:
+          type: string
+          description: ""
+        roles:
+          type: array
+          description: ""
+        username:
+          type: string
+          description: ""
+        accessToken:
+          type: string
+          description: ""
+      required:
+    LogoutReq:
+      type: object
+      properties:
+        withCredentials:
+          type: boolean
+          description: ""
+      required:
+    MenuInfo:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        status:
+          type: integer
+          description: ""
+        type:
+          type: string
+          description: ""
+        path:
+          type: string
+          description: ""
+        name:
+          type: string
+          description: ""
+        routeName:
+          type: string
+          description: ""
+        component:
+          type: string
+          description: ""
+        meta:
+          type: object
+          description: ""
+        parentId:
+          type: integer
+          description: ""
+        children:
+          type: array
+          description: ""
+        perm:
+          type: string
+          description: ""
+        createdAt:
+          type: integer
+          description: ""
+      required:
+    MenuMeta:
+      type: object
+      properties:
+        authority:
+          type: array
+          description: ""
+        affixTab:
+          type: integer
+          description: ""
+        hideChildrenInMenu:
+          type: integer
+          description: ""
+        hideInBreadcrumb:
+          type: integer
+          description: ""
+        hideInMenu:
+          type: integer
+          description: ""
+        hideInTab:
+          type: integer
+          description: ""
+        icon:
+          type: string
+          description: ""
+        keepAlive:
+          type: integer
+          description: ""
+        sort:
+          type: integer
+          description: ""
+        name:
+          type: string
+          description: ""
+      required:
+    MenuResp:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: ""
+        items:
+          type: object
+          description: ""
+      required:
+    MenuTreeReq:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: ""
+        pageSize:
+          type: integer
+          description: ""
+        name:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+      required:
+    RecordInfoResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        username:
+          type: string
+          description: ""
+        userId:
+          type: integer
+          description: ""
+        description:
+          type: string
+          description: ""
+        method:
+          type: string
+          description: ""
+        path:
+          type: string
+          description: ""
+        statusCode:
+          type: integer
+          description: ""
+        elapsed:
+          type: string
+          description: ""
+        msg:
+          type: string
+          description: ""
+        request:
+          type: string
+          description: ""
+        response:
+          type: string
+          description: ""
+        platform:
+          type: string
+          description: ""
+        ip:
+          type: string
+          description: ""
+        address:
+          type: string
+          description: ""
+        createdAt:
+          type: integer
+          description: ""
+      required:
+    RecordListReq:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: ""
+        pageSize:
+          type: integer
+          description: ""
+        username:
+          type: string
+          description: ""
+        createTime[]:
+          type: array
+          description: ""
+      required:
+    RecordListResp:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: ""
+        items:
+          type: object
+          description: ""
+      required:
+    RoleInfoResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        name:
+          type: string
+          description: ""
+        code:
+          type: string
+          description: ""
+        sort:
+          type: integer
+          description: ""
+        remark:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+        createdAt:
+          type: integer
+          description: ""
+        authId:
+          type: array
+          description: ""
+        apiId:
+          type: array
+          description: ""
+      required:
+    RoleListReq:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: ""
+        pageSize:
+          type: integer
+          description: ""
+        name:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+      required:
+    RoleListResp:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: ""
+        items:
+          type: object
+          description: ""
+      required:
+    RouterMetaResp:
+      type: object
+      properties:
+        icon:
+          type: string
+          description: ""
+        sort,omitempty:
+          type: integer
+          description: ""
+        title:
+          type: string
+          description: ""
+        affixTab,omitempty:
+          type: boolean
+          description: ""
+      required:
+    RouterResp:
+      type: object
+      properties:
+        meta:
+          type: object
+          description: ""
+        name:
+          type: string
+          description: ""
+        path:
+          type: string
+          description: ""
+        component,omitempty:
+          type: string
+          description: ""
+        children,omitempty:
+          type: array
+          description: ""
+      required:
+    UpsertApiReq:
+      type: object
+      properties:
+        parentId:
+          type: integer
+          description: ""
+        description:
+          type: string
+          description: ""
+        method:
+          type: string
+          description: ""
+        path:
+          type: string
+          description: ""
+      required:
+    UpsertDictReq:
+      type: object
+      properties:
+        dictName:
+          type: string
+          description: ""
+        dictType:
+          type: string
+          description: ""
+        itemKey:
+          type: string
+          description: ""
+        itemValue:
+          type: string
+          description: ""
+        sort:
+          type: integer
+          description: ""
+        remark:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+      required:
+    UpsertRoleReq:
+      type: object
+      properties:
+        name:
+          type: string
+          description: ""
+        code:
+          type: string
+          description: ""
+        sort:
+          type: integer
+          description: ""
+        remark:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+      required:
+    UpsertUserReq:
+      type: object
+      properties:
+        username:
+          type: string
+          description: ""
+        password:
+          type: string
+          description: ""
+        nickname:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+        roleId:
+          type: integer
+          description: ""
+        mobile:
+          type: string
+          description: ""
+        email:
+          type: string
+          description: ""
+        remark:
+          type: string
+          description: ""
+      required:
+        - username
+        - nickname
+        - roleId
+    UserInfoResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        realName:
+          type: string
+          description: ""
+        roles:
+          type: array
+          description: ""
+        username:
+          type: string
+          description: ""
+        nickname:
+          type: string
+          description: ""
+        mobile:
+          type: string
+          description: ""
+        gender:
+          type: integer
+          description: ""
+        email:
+          type: string
+          description: ""
+        avatar:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+        remark:
+          type: string
+          description: ""
+        lastLoginTime:
+          type: integer
+          description: ""
+        lastLoginIp:
+          type: string
+          description: ""
+        roleId:
+          type: integer
+          description: ""
+        roleName:
+          type: string
+          description: ""
+        permissions:
+          type: array
+          description: ""
+        createdAt:
+          type: integer
+          description: ""
+      required:
+    UserListReq:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: ""
+        pageSize:
+          type: integer
+          description: ""
+        username:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+      required:
+    UserListResp:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: ""
+        items:
+          type: object
+          description: ""
+      required:

@@ -1,0 +1,78 @@
+
+openapi: 3.0.0
+info:
+  title: Auth
+  version: "1.0"
+paths:
+  /system/auth/login:
+    post:
+      summary: SystemAuthLogin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginReq'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResp'
+  /system/auth/logout:
+    post:
+      summary: SystemAuthLogout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LogoutReq'
+      responses:
+        '200':
+          description: OK
+
+components:
+  schemas:
+    LoginReq:
+      type: object
+      properties:
+        username:
+          type: string
+          description: ""
+        password:
+          type: string
+          description: ""
+      required:
+        - username
+        - password
+    LoginResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        password:
+          type: string
+          description: ""
+        realName:
+          type: string
+          description: ""
+        roles:
+          type: array
+          description: ""
+        username:
+          type: string
+          description: ""
+        accessToken:
+          type: string
+          description: ""
+      required:
+    LogoutReq:
+      type: object
+      properties:
+        withCredentials:
+          type: boolean
+          description: ""
+      required:

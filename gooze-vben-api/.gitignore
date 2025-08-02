@@ -1,0 +1,12 @@
+logs
+log
+*.log
+*.exe
+*.dll
+*.so
+.idea
+.DS_Store
+*.iml
+*.swp
+*.test
+*.out
