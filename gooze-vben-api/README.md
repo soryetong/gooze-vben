@@ -4,7 +4,24 @@
 
 # 如何使用？
 
-1. 启动项目
+1. 拉取项目
+
+    ```bash
+    git clone https://github.com/soryetong/gooze-vben.git
+   ```
+   
+2. 拉取依赖
+
+    ```bash
+    go mod tidy
+    ```
+   
+3. 修改配置文件
+
+   修改 `configs/config.yaml` 文件，将数据库链接地址修改为你的数据库链接地址。
+
+
+4. 启动项目
 
    在 `build/scripts` 目录下有一个 `start.sh` 脚本，它就是用来启动项目的。
 
@@ -13,7 +30,7 @@
     ```
 
 
-2. 代码生成
+5. 代码生成
 
    在 `build/scripts` 目录下有一个 `gen.sh` 脚本，它就是用来生成代码的。
 
