@@ -197,8 +197,8 @@ github.com/sagikazarmark/locafero v0.9.0 h1:GbgQGNtTrEmddYDSAH9QLRyfAHY12md+8YFT
 github.com/sagikazarmark/locafero v0.9.0/go.mod h1:UBUyz37V+EdMS3hDF3QWIiVr/2dPrx49OMO0Bn0hJqk=
 github.com/satori/go.uuid v1.2.0 h1:0uYX9dsZ2yD7q2RtLRtPSdGDWzjeM3TbMJP9utgA0ww=
 github.com/satori/go.uuid v1.2.0/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
-github.com/soryetong/gooze-starter v0.0.0-20250802121118-d93729363a1f h1:xEdVmreZprdxDr/iBBjGI6hmxJz9iigFLGMBmI7gVUA=
-github.com/soryetong/gooze-starter v0.0.0-20250802121118-d93729363a1f/go.mod h1:zdQihDU9Ie2ORgaTlPGGf0w3kHFJgawX/XTOt2sJOUI=
+github.com/soryetong/gooze-starter v0.0.0-20250819111935-13a4b3365ffd h1:X0jZDQ0R6zU4Sbs8lWm2cxHihWsgPShj8M26HKQJv3o=
+github.com/soryetong/gooze-starter v0.0.0-20250819111935-13a4b3365ffd/go.mod h1:zdQihDU9Ie2ORgaTlPGGf0w3kHFJgawX/XTOt2sJOUI=
 github.com/sourcegraph/conc v0.3.0 h1:OQTbbt6P72L20UqAkXXuLOj79LfEanQ+YQFNpLA9ySo=
 github.com/sourcegraph/conc v0.3.0/go.mod h1:Sdozi7LEKbFPqYX2/J+iBAM6HpqSLTASQIKqDmF7Mt0=
 github.com/spf13/afero v1.14.0 h1:9tH6MapGnn/j0eb0yIXiLjERO8RB6xIVZRDCX7PtqWA=

@@ -6,7 +6,7 @@ require (
 	github.com/casbin/gorm-adapter/v3 v3.33.0
 	github.com/gin-gonic/gin v1.10.1
 	github.com/jinzhu/copier v0.4.0
-	github.com/soryetong/gooze-starter v0.0.0-20250802121118-d93729363a1f
+	github.com/soryetong/gooze-starter v0.0.0-20250819111935-13a4b3365ffd
 	github.com/spf13/cast v1.9.2
 	github.com/spf13/viper v1.20.1
 	go.uber.org/zap v1.27.0

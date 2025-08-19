@@ -8,37 +8,35 @@
 
     ```bash
     git clone https://github.com/soryetong/gooze-vben.git
-   ```
-   
+    ```
+
 2. 拉取依赖
 
     ```bash
+    cd gooze-vben-api
+
     go mod tidy
     ```
-   
+
 3. 修改配置文件
 
-   修改 `configs/config.yaml` 文件，将数据库链接地址修改为你的数据库链接地址。
-
+    修改 `configs/config.yaml` 文件，将数据库链接地址修改为你的数据库链接地址。
 
 4. 启动项目
 
-   在 `build/scripts` 目录下有一个 `start.sh` 脚本，它就是用来启动项目的。
+    在 `build/scripts` 目录下有一个 `start.sh` 脚本，它就是用来启动项目的。
 
     ```bash
-    sh ./build/scripts/start.sh
+    sh ./build/scripts/start_server.sh
     ```
-
 
 5. 代码生成
 
-   在 `build/scripts` 目录下有一个 `gen.sh` 脚本，它就是用来生成代码的。
+    在 `build/scripts` 目录下有一个 `gen.sh` 脚本，它就是用来生成代码的。
 
     ```bash
-    sh ./build/scripts/gen.sh
+    sh ./build/scripts/gen_server.sh
     ```
-
-
 
 # 目录结构说明
 
@@ -49,8 +47,8 @@ my-project/
 │
 ├── build/                    # 构建相关脚本（如 Dockerfile、CI 脚本）
 │   ├── scripts/              # 启动/部署等辅助脚本（如 build.sh）
-│   │   └── gen.sh            # 代码生成脚本
-│   │   └── start.sh          # 项目启动脚本
+│   │   └── gen_server.sh     # 代码生成脚本
+│   │   └── start_server.sh   # 项目启动脚本
 │   └── docker/               # Dockerfile 或 compose 文件
 │
 ├── cmd/                      # 程序入口
@@ -61,6 +59,9 @@ my-project/
 │   └── config.yaml           # 主配置文件（可配合 .env 使用）
 │
 ├── docs/                     # 文档入口
+│   ├── sql/                  # sql 文件
+│   │   └── default.sql       # 有默认数据的 sql
+│   │   └── sql.sql           # 无默认数据的 sql
 │   ├── swagger/              # Swagger 接口文档
 │   │   └── user.yaml
 │
@@ -76,7 +77,7 @@ my-project/
 │
 ├── static/                   # 静态资源
 │   ├── storage/              # 存放临时文件、用户上传文件、缓存等
-│   
+│
 ├── test/                     # 单元测试 / 集成测试代码
 │
 ├── .env                      # 环境变量文件（用于区分本地/测试/生产）
