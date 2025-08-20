@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"gooze-vben-api/internal/dto"
-	"gooze-vben-api/pkg/models"
+	"gooze-vben-api/models"
 
 	gormadapter "github.com/casbin/gorm-adapter/v3"
 	"github.com/jinzhu/copier"

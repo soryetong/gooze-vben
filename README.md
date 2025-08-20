@@ -6,6 +6,53 @@
 
 <br>
 
+## 快速开始
+
+1. 下载
+
+```bash
+git clone https://github.com/soryetong/gooze-vben.git
+```
+
+2. 启动 admin
+
+> 要求：`node` 版本 20 以上，`pnpm` 9.15 以上
+
+> 我的 `nvm use 20.11`，`pnpm` 9.15.5
+
+```bash
+cd gooze-vben/gooze-vben-admin
+
+# 使用项目指定的pnpm版本进行依赖安装
+npm i -g corepack
+
+# 安装依赖
+pnpm install
+
+# 启动
+pnpm dev
+```
+
+3. 启动服务器
+
+> 要求：go 1.24
+
+```bash
+cd gooze-vben/gooze-vben-api
+
+# 导入 docs/sql/default.sql
+
+# 修改 `configs/config.yaml` 文件，将数据库链接地址修改为你的数据库链接地址。
+
+# ⚠️⚠️⚠️：一定要修改数据库链接地址
+
+sh ./build/scripts/start_server.sh
+```
+
+4. 访问第 2 步输出的地址即可
+
+<br>
+
 ## 介绍
 
 > 后端介绍 [看这里](./gooze-vben-api/README.md)

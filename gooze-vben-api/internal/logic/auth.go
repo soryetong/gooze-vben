@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"gooze-vben-api/internal/dto"
-	"gooze-vben-api/pkg/models"
+	"gooze-vben-api/models"
 	"time"
 
 	"github.com/soryetong/gooze-starter/gooze"

@@ -3,11 +3,11 @@ app:
     env: debug
     addr: ":18168"
     timeout: 1
-    routerPrefix: api/v1
+    routerPrefix: /api/v1
 databases:
     - name: master
       driver: mysql
-      dsn: root:123456@tcp(127.0.0.1:3307)/gooze?charset=utf8&parseTime=True&loc=Local&timeout=5s
+      dsn: root:123456@tcp(127.0.0.1:3307)/gooze-admin?charset=utf8&parseTime=True&loc=Local&timeout=5s
       useGorm: true
       remark: 以下配置是可选的，而且有些Driver是不支持有些配置的，如果没有配置，则使用默认配置
       logLevel: 3

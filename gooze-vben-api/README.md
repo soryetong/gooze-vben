@@ -72,8 +72,7 @@ my-project/
 │   ├── service/              # 业务逻辑
 │   └── bootstrap/            # 启动逻辑
 │
-├── pkg/                      # 可复用公共组件（非业务相关）
-│   ├── model/                # 通用数据库模型
+├── model/                    # 通用数据库模型
 │
 ├── static/                   # 静态资源
 │   ├── storage/              # 存放临时文件、用户上传文件、缓存等

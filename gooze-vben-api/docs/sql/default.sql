@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 50736 (5.7.36)
  Source Host           : 127.0.0.1:3307
- Source Schema         : greasyx-admin
+ Source Schema         : gooze-admin
 
  Target Server Type    : MySQL
  Target Server Version : 50736 (5.7.36)
@@ -41,7 +41,7 @@ BEGIN;
 INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (1, 'p', '1', '/api/delete/:id', 'DELETE', '', '', '');
 INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (2, 'p', '1', '/api/list', 'GET', '', '', '');
 INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (3, 'p', '1', '/api/update/:id', 'PUT', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (4, 'p', '1', '/auth/login', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (4, 'p', '1', '/system/auth/login', 'POST', '', '', '');
 INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (5, 'p', '1', '/dict/add', 'POST', '', '', '');
 INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (6, 'p', '1', '/dict/delete/:id', 'DELETE', '', '', '');
 INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (7, 'p', '1', '/dict/list', 'GET', '', '', '');
