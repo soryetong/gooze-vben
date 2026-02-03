@@ -1,0 +1,31 @@
+type MaterialUpsertReq {
+    Name string `json:"name" form:"name" binding:"required"`
+    Resource *multipart.FileHeader `json:"resource" form:"resource" binding:"required"`
+    Description string `json:"description" form:"description"`
+    Status int64 `json:"status" form:"status" binding:"required"`
+    Type string `json:"type" form:"type" binding:"required,oneof=image audio video"`
+}
+
+type MaterialListReq {
+    Page int64 `json:"page" form:"page"`
+    PageSize int64 `json:"pageSize" form:"pageSize"`
+    Keyword string `json:"keyword" form:"keyword"`
+    Status int64 `json:"status" form:"status"`
+    Type string `json:"type" form:"type" binding:"oneof=image audio video"`
+}
+
+type MaterialInfoResp {
+    Id int64 `json:"id"`
+    Name string `json:"name"`
+	Resource string `json:"resource"`
+	Description string `json:"description"`
+    Status int64 `json:"status"`
+    CreateTime int64 `json:"createTime"`
+}
+
+service Material Group Auth {
+    post add (MaterialUpsertReq) returns
+    get list (MaterialListReq) returns (CommonListResp)
+    post update/:id (MaterialUpsertReq) returns
+    delete delete/:id returns
+}

@@ -13,6 +13,9 @@ setupVbenForm<ComponentType>({
     modelPropNameMap: {
       Upload: 'fileList',
       CheckboxGroup: 'model-value',
+      MaterialUpload: 'model-value',
+      MaterialPicker: 'model-value',
+      RichEditor: 'model-value',
     },
   },
   defineRules: {

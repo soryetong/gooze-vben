@@ -116,5 +116,44 @@
         "delete": "删除日志"
       }
     }
+  },
+  "material": {
+    "title": "素材管理",
+    "image": {
+      "module": "图片素材",
+      "title": "图片管理",
+      "name": "图片名称",
+      "resource": "图片资源",
+      "description": "图片描述",
+      "button": {
+        "create": "新增图片",
+        "delete": "删除图片",
+        "update": "修改图片"
+      }
+    },
+    "audio": {
+      "module": "音频素材",
+      "title": "音频管理",
+      "name": "音频名称",
+      "resource": "音频资源",
+      "description": "音频描述",
+      "button": {
+        "create": "新增音频",
+        "delete": "删除音频",
+        "update": "修改音频"
+      }
+    },
+    "video": {
+      "module": "视频素材",
+      "title": "视频管理",
+      "name": "视频名称",
+      "resource": "视频资源",
+      "description": "视频描述",
+      "button": {
+        "create": "新增视频",
+        "delete": "删除视频",
+        "update": "修改视频"
+      }
+    }
   }
 }

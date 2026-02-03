@@ -165,3 +165,21 @@ CREATE TABLE `sys_records`  (
        `deleted_at` datetime DEFAULT NULL COMMENT '删除时间',
        PRIMARY KEY (`id`)
 ) ENGINE = InnoDB COMMENT = '操作日志';
+
+-- ---------------------------------------------------
+-- Table structure for c_materials
+-- ---------------------------------------------------
+DROP TABLE IF EXISTS `c_materials`;
+CREATE TABLE `c_materials`  (
+    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键字段',
+    `name` varchar(255) NOT NULL DEFAULT '' COMMENT '素材名称',
+    `resource_url` varchar(255) NOT NULL DEFAULT '' COMMENT '素材地址',
+    `description` varchar(2500) NOT NULL DEFAULT '' COMMENT '描述',
+    `status` tinyint(1) unsigned NOT NULL DEFAULT 1 COMMENT '状态（1-显示 2-隐藏）',
+    `type` ENUM('image', 'audio', 'video') NOT NULL,
+    `created_at` datetime DEFAULT NULL COMMENT '创建时间戳',
+    `updated_at` datetime DEFAULT NULL COMMENT '修改时间戳',
+    `deleted_at` datetime DEFAULT NULL COMMENT '删除时间',
+    PRIMARY KEY (`id`),
+    KEY `idx_name` (`name`)
+) ENGINE = InnoDB COMMENT = '素材管理';

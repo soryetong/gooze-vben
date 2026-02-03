@@ -30,6 +30,8 @@
     "@vben/types": "workspace:*",
     "@vben/utils": "workspace:*",
     "@vueuse/core": "catalog:",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
     "dayjs": "catalog:",
     "element-plus": "catalog:",
     "lucide-vue-next": "0.465.0",

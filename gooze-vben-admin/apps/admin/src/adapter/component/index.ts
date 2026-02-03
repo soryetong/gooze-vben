@@ -12,6 +12,9 @@ import { h } from 'vue';
 
 import { ApiComponent, globalShareState, IconPicker } from '@vben/common-ui';
 import { $t } from '@vben/locales';
+import MaterialUpload from '#/components/MaterialUpload.vue';
+import MaterialPicker from '#/components/MaterialPicker.vue';
+import RichEditor from '#/components/RichEditor.vue';
 
 import {
   ElButton,
@@ -62,6 +65,9 @@ export type ComponentType =
   | 'TimePicker'
   | 'TreeSelect'
   | 'Upload'
+  | 'MaterialUpload'
+  | 'MaterialPicker'
+  | 'RichEditor'
   | BaseFormComponentType;
 
 async function initComponentAdapter() {
@@ -212,6 +218,15 @@ async function initComponentAdapter() {
     },
     TreeSelect: withDefaultPlaceholder(ElTreeSelect, 'select'),
     Upload: ElUpload,
+    MaterialUpload: (props, { attrs, slots }) => {
+      return h(MaterialUpload, { ...props, ...attrs }, slots);
+    },
+    MaterialPicker: (props, { attrs, slots }) => {
+      return h(MaterialPicker, { ...props, ...attrs, isPicker: true }, slots);
+    },
+    RichEditor: (props, { attrs, slots }) => {
+      return h(RichEditor, { ...props, ...attrs }, slots);
+    },
   };
 
   // 将组件注册到全局共享状态中

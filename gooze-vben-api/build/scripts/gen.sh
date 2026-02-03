@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 用法: sh ./build/scripts/gen.sh <mainPath> <configPath> <envPath> <srcPath> <outputPath> <needLog>
-# 示例: sh ./build/scripts/gen.sh ./cmd/admin/main.go ./configs/admin.yaml ./env.admin ./api ./internal true
+# 示例: sh ./build/scripts/gen.sh ./gooze-starter/admin/main.go ./configs/admin.yaml ./env.admin ./api ./internal true
 
 set -e
 

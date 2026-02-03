@@ -116,5 +116,44 @@
         "delete": "Delete"
       }
     }
+  },
+  "material": {
+    "title": "Material Management",
+    "image": {
+      "module": "Image Material",
+      "title": "Image Management",
+      "name": "Image Name",
+      "resource": "Image Resource",
+      "description": "Image Description",
+      "button": {
+        "create": "Create",
+        "delete": "Delete",
+        "update": "Update"
+      }
+    },
+    "audio": {
+      "module": "Audio Material",
+      "title": "Audio Management",
+      "name": "Audio Name",
+      "resource": "Audio Resource",
+      "description": "Audio Description",
+      "button": {
+        "create": "Create",
+        "delete": "Delete",
+        "update": "Update"
+      }
+    },
+    "video": {
+      "module": "Video Material",
+      "title": "Video Management",
+      "name": "Video Name",
+      "resource": "Video Resource",
+      "description": "Video Description",
+      "button": {
+        "create": "Create",
+        "delete": "Delete",
+        "update": "Update"
+      }
+    }
   }
 }

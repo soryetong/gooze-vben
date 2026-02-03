@@ -35,12 +35,14 @@
     "create": "Create {moduleName}",
     "update": "Update {moduleName}",
     "delete": "Delete {moduleName}",
-    "search": "Search"
+    "search": "Search",
+    "upload": "Upload Material"
   },
   "modal": {
     "create": "Create {moduleName}",
     "update": "Update {moduleName}",
-    "delete": "Delete {moduleName}"
+    "delete": "Delete {moduleName}",
+    "add": "Add {moduleName}"
   },
   "notification": {
     "create_success": "Create Success",

@@ -1,0 +1,160 @@
+
+openapi: 3.0.0
+info:
+  title: Material
+  version: "1.0"
+paths:
+  /material/add:
+    post:
+      summary: MaterialAdd
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaterialUpsertReq'
+      responses:
+        '200':
+          description: OK
+  /material/list:
+    get:
+      summary: MaterialList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaterialListReq'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonListResp'
+  /material/update/:id:
+    post:
+      summary: MaterialUpdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaterialUpsertReq'
+      responses:
+        '200':
+          description: OK
+  /material/delete/:id:
+    delete:
+      summary: MaterialDelete
+      responses:
+        '200':
+          description: OK
+
+components:
+  schemas:
+    LoginReq:
+      type: object
+      properties:
+        username:
+          type: string
+          description: ""
+        password:
+          type: string
+          description: ""
+      required:
+        - username
+        - password
+    LoginResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        password:
+          type: string
+          description: ""
+        realName:
+          type: string
+          description: ""
+        roles:
+          type: array
+          description: ""
+        username:
+          type: string
+          description: ""
+        accessToken:
+          type: string
+          description: ""
+      required:
+    LogoutReq:
+      type: object
+      properties:
+        withCredentials:
+          type: boolean
+          description: ""
+      required:
+    MaterialInfoResp:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ""
+        name:
+          type: string
+          description: ""
+        resource:
+          type: string
+          description: ""
+        description:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+        createTime:
+          type: integer
+          description: ""
+      required:
+    MaterialListReq:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: ""
+        pageSize:
+          type: integer
+          description: ""
+        keyword:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+        type:
+          type: string
+          description: ""
+      required:
+    MaterialUpsertReq:
+      type: object
+      properties:
+        name:
+          type: string
+          description: ""
+        resource:
+          type: object
+          description: ""
+        description:
+          type: string
+          description: ""
+        status:
+          type: integer
+          description: ""
+        type:
+          type: string
+          description: ""
+      required:
+        - name
+        - resource
+        - status
+        - type

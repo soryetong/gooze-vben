@@ -38,33 +38,38 @@ CREATE TABLE `casbin_rule` (
 -- Records of casbin_rule
 -- ----------------------------
 BEGIN;
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (1, 'p', '1', '/api/delete/:id', 'DELETE', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (2, 'p', '1', '/api/list', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (3, 'p', '1', '/api/update/:id', 'PUT', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (4, 'p', '1', '/system/auth/login', 'POST', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (5, 'p', '1', '/dict/add', 'POST', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (6, 'p', '1', '/dict/delete/:id', 'DELETE', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (7, 'p', '1', '/dict/list', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (8, 'p', '1', '/dict/update/:id', 'PUT', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (9, 'p', '1', '/menu/add', 'POST', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (10, 'p', '1', '/menu/delete/:id', 'DELETE', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (11, 'p', '1', '/menu/info/:id', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (12, 'p', '1', '/menu/router', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (13, 'p', '1', '/menu/tree', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (14, 'p', '1', '/menu/update/:id', 'PUT', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (15, 'p', '1', '/record/delete/:id', 'DELETE', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (16, 'p', '1', '/record/list', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (17, 'p', '1', '/role/add', 'POST', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (18, 'p', '1', '/role/assign/:id', 'PUT', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (19, 'p', '1', '/role/delete/:id', 'DELETE', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (20, 'p', '1', '/role/info/:id', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (21, 'p', '1', '/role/list', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (22, 'p', '1', '/role/update/:id', 'PUT', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (23, 'p', '1', '/user/add', 'POST', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (24, 'p', '1', '/user/delete/:id', 'DELETE', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (25, 'p', '1', '/user/info', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (26, 'p', '1', '/user/list', 'GET', '', '', '');
-INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (27, 'p', '1', '/user/update/:id', 'PUT', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (1, 'p', '1', '/api/add', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (2, 'p', '1', '/api/delete/:id', 'DELETE', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (3, 'p', '1', '/api/list', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (4, 'p', '1', '/api/update/:id', 'PUT', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (5, 'p', '1', '/system/auth/login', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (6, 'p', '1', '/dict/add', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (7, 'p', '1', '/dict/delete/:id', 'DELETE', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (8, 'p', '1', '/dict/list', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (9, 'p', '1', '/dict/update/:id', 'PUT', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (10, 'p', '1', '/menu/add', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (11, 'p', '1', '/menu/delete/:id', 'DELETE', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (12, 'p', '1', '/menu/info/:id', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (13, 'p', '1', '/menu/router', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (14, 'p', '1', '/menu/tree', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (15, 'p', '1', '/menu/update/:id', 'PUT', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (16, 'p', '1', '/record/delete/:id', 'DELETE', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (17, 'p', '1', '/record/list', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (18, 'p', '1', '/role/add', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (19, 'p', '1', '/role/assign/:id', 'PUT', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (20, 'p', '1', '/role/delete/:id', 'DELETE', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (21, 'p', '1', '/role/info/:id', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (22, 'p', '1', '/role/list', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (23, 'p', '1', '/role/update/:id', 'PUT', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (24, 'p', '1', '/user/add', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (25, 'p', '1', '/user/delete/:id', 'DELETE', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (26, 'p', '1', '/user/info', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (27, 'p', '1', '/user/list', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (28, 'p', '1', '/user/update/:id', 'PUT', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (29, 'p', '1', '/material/add', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (30, 'p', '1', '/material/list', 'GET', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (31, 'p', '1', '/material/update/:id', 'POST', '', '', '');
+INSERT INTO `casbin_rule` (`id`, `ptype`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5`) VALUES (32, 'p', '1', '/material/delete/:id', 'DELETE', '', '', '');
 COMMIT;
 
 -- ----------------------------
@@ -168,6 +173,22 @@ INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_
 INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (29, 25, '', 'ui.button.search', 'BUTTON', 'DictSearch', '', 'BasicLayout', 'system:dict:search', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-03-13 16:48:29', '2025-03-13 16:48:29', NULL);
 INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (30, 3, '', 'page.system.record.title', 'MENU', 'RecordList', '/system/record', '/views/system/record/index', '', 1, 0, 0, 0, 0, 0, 0, 0, 'lucide:arrow-left-right', '', NULL, '2025-03-14 16:09:56', '2025-03-14 16:09:56', NULL);
 INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (31, 30, '', 'page.system.record.button.delete', 'BUTTON', 'RecordDelete', '', 'BasicLayout', 'system:record:delete', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-03-14 17:33:55', '2025-03-14 17:33:55', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (32, 0, '', 'page.material.title', 'FOLDER', 'Material', '/material', 'BasicLayout', '', 1, 0, 0, 0, 0, 0, 0, 0, 'lucide:image-play', '', NULL, '2025-11-05 10:29:45', '2025-11-05 10:29:45', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (33, 32, '', 'page.material.image.title', 'MENU', 'MaterialImage', '/material/image', '/views/material/image/index', '', 1, 0, 0, 0, 0, 0, 0, 0, 'lucide:image-up', '', NULL, '2025-11-04 14:59:08', '2025-11-05 10:42:19', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (34, 33, '', 'page.material.image.button.create', 'BUTTON', 'MaterialImageCreate', '', 'BasicLayout', 'system:material:image:create', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (35, 33, '', 'page.material.image.button.delete', 'BUTTON', 'MaterialImageDelete', '', 'BasicLayout', 'system:material:image:delete', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (36, 33, '', 'page.material.image.button.update', 'BUTTON', 'MaterialImageUpdate', '', 'BasicLayout', 'system:material:image:update', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (37, 33, '', 'ui.button.search', 'BUTTON', 'MaterialImageSearch', '', 'BasicLayout', 'system:material:image:search', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (38, 32, '', 'page.material.audio.title', 'MENU', 'MaterialAudio', '/material/audio', '/views/material/audio/index', '', 1, 0, 0, 0, 0, 0, 0, 0, 'lucide:audio-lines', '', NULL, '2025-11-04 14:59:08', '2025-11-05 10:42:53', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (39, 38, '', 'page.material.audio.button.create', 'BUTTON', 'MaterialAudioCreate', '', 'BasicLayout', 'system:material:audio:create', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (40, 38, '', 'page.material.audio.button.delete', 'BUTTON', 'MaterialAudioDelete', '', 'BasicLayout', 'system:material:audio:delete', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (41, 38, '', 'page.material.audio.button.update', 'BUTTON', 'MaterialAudioUpdate', '', 'BasicLayout', 'system:material:audio:update', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (42, 38, '', 'ui.button.search', 'BUTTON', 'MaterialAudioSearch', '', 'BasicLayout', 'system:material:audio:search', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (43, 32, '', 'page.material.video.title', 'MENU', 'MaterialVideo', '/material/video', '/views/material/video/index', '', 1, 0, 0, 0, 0, 0, 0, 0, 'lucide:video', '', NULL, '2025-11-04 14:59:08', '2025-11-05 10:43:14', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (44, 43, '', 'page.material.video.button.create', 'BUTTON', 'MaterialVideoCreate', '', 'BasicLayout', 'system:material:video:create', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (45, 43, '', 'page.material.video.button.delete', 'BUTTON', 'MaterialVideoDelete', '', 'BasicLayout', 'system:material:video:delete', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (46, 43, '', 'page.material.video.button.update', 'BUTTON', 'MaterialVideoUpdate', '', 'BasicLayout', 'system:material:video:update', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
+INSERT INTO `sys_menus` (`id`, `parent_id`, `tree_path`, `name`, `type`, `route_name`, `path`, `component`, `perm`, `status`, `affix_tab`, `hide_children_in_menu`, `hide_in_breadcrumb`, `hide_in_menu`, `hide_in_tab`, `keep_alive`, `sort`, `icon`, `redirect`, `params`, `created_at`, `updated_at`, `deleted_at`) VALUES (47, 43, '', 'ui.button.search', 'BUTTON', 'MaterialVideoSearch', '', 'BasicLayout', 'system:material:video:search', 1, 0, 0, 0, 0, 0, 0, 0, '', '', NULL, '2025-11-03 22:10:13', '2025-11-03 22:10:13', NULL);
 COMMIT;
 
 -- -----------------------------
@@ -244,6 +265,22 @@ INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated
 INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (28, 1, 29, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
 INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (29, 1, 30, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
 INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (30, 1, 31, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (31, 1, 32, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (32, 1, 33, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (33, 1, 34, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (34, 1, 35, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (35, 1, 36, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (36, 1, 37, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (37, 1, 38, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (38, 1, 39, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (39, 1, 40, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (40, 1, 41, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (41, 1, 42, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (42, 1, 43, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (43, 1, 44, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (44, 1, 45, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (45, 1, 46, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
+INSERT INTO `sys_role_auths` (`id`, `role_id`, `auth_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (46, 1, 47, '2025-03-05 18:02:41', '2025-03-05 18:02:41', NULL);
 COMMIT;
 
 -- -----------------------------
@@ -270,38 +307,38 @@ BEGIN;
 INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (1, 0, 'Base组', '', '', '2025-03-06 10:21:25', '2025-03-06 10:21:25', NULL);
 INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (2, 1, '用户登录', 'POST', '/auth/login', '2025-03-06 10:22:03', '2025-03-06 10:22:03', NULL);
 INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (3, 1, '用户信息', 'GET', '/user/info', '2025-03-06 10:23:05', '2025-03-06 10:23:05', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (4, 0, '系统用户管理', '', '', '2025-03-06 13:38:16', '2025-03-06 13:38:16', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (5, 4, '新增管理员', 'POST', '/user/add', '2025-03-06 13:39:32', '2025-03-06 13:39:32', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (6, 4, '管理员列表', 'GET', '/user/list', '2025-03-06 13:39:51', '2025-03-06 13:39:51', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (7, 4, '修改管理员', 'PUT', '/user/update/:id', '2025-03-06 13:40:11', '2025-03-06 13:40:11', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (8, 4, '删除管理员', 'DELETE', '/user/delete/:id', '2025-03-06 13:40:27', '2025-03-06 13:40:27', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (9, 0, '系统菜单管理', '', '', '2025-03-06 13:40:45', '2025-03-06 13:40:45', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (10, 1, '当前用户可用的菜单', 'GET', '/menu/router', '2025-03-06 13:41:32', '2025-03-06 13:41:32', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (11, 9, '菜单树', 'GET', '/menu/tree', '2025-03-06 13:41:52', '2025-03-06 13:41:52', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (12, 9, '添加菜单', 'POST', '/menu/add', '2025-03-06 13:42:07', '2025-03-06 13:42:07', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (13, 9, '修改菜单', 'PUT', '/menu/update/:id', '2025-03-06 13:42:28', '2025-03-06 13:42:28', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (14, 9, '获取菜单数据', 'GET', '/menu/info/:id', '2025-03-06 13:42:44', '2025-03-06 13:42:44', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (15, 9, '删除菜单', 'DELETE', '/menu/delete/:id', '2025-03-06 13:42:59', '2025-03-06 13:42:59', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (16, 0, '系统角色管理', '', '', '2025-03-06 13:45:04', '2025-03-06 13:45:04', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (17, 16, '新增角色', 'POST', '/role/add', '2025-03-06 13:46:01', '2025-03-06 13:46:01', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (18, 16, '角色列表', 'GET', '/role/list', '2025-03-06 13:46:16', '2025-03-06 13:46:16', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (19, 16, '角色信息', 'GET', '/role/info/:id', '2025-03-06 13:47:08', '2025-03-06 13:47:08', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (20, 16, '角色修改', 'PUT', '/role/update/:id', '2025-03-06 13:47:24', '2025-03-06 13:47:24', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (21, 16, '给角色分配权限', 'PUT', '/role/assign/:id', '2025-03-06 13:47:42', '2025-03-06 13:47:42', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (22, 16, '删除角色', 'DELETE', '/role/delete/:id', '2025-03-06 13:47:57', '2025-03-06 13:47:57', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (23, 0, '系统API管理', '', '', '2025-03-06 13:48:27', '2025-03-06 13:48:27', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (24, 23, '新增接口', 'POST', '/api/add', '2025-03-06 13:48:50', '2025-03-06 13:48:50', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (25, 23, '接口列表', 'GET', '/api/list', '2025-03-06 13:49:14', '2025-03-06 13:49:14', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (26, 23, '修改接口', 'PUT', '/api/update/:id', '2025-03-06 13:50:26', '2025-03-06 13:50:26', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (27, 23, '删除接口', 'DELETE', '/api/delete/:id', '2025-03-06 13:50:42', '2025-03-06 13:50:42', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (28, 0, '系统字典管理', '', '', '2025-03-06 13:50:55', '2025-03-06 13:50:55', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (29, 28, '新增条目', 'POST', '/dict/add', '2025-03-06 13:51:17', '2025-03-06 13:51:17', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (30, 28, '字典列表', 'GET', '/dict/list', '2025-03-06 13:51:31', '2025-03-06 13:51:31', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (31, 28, '修改字典', 'PUT', '/dict/update/:id', '2025-03-06 13:51:46', '2025-03-06 13:51:46', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (32, 28, '删除字典', 'DELETE', '/dict/delete/:id', '2025-03-06 13:52:04', '2025-03-06 13:52:04', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (33, 0, '系统日志管理', '', '', '2025-03-06 13:52:14', '2025-03-06 14:00:24', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (34, 33, '日志列表', 'GET', '/record/list', '2025-03-06 13:52:27', '2025-03-06 13:52:27', NULL);
-INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (35, 33, '日志删除', 'DELETE', '/record/delete/:id', '2025-03-06 13:52:43', '2025-03-06 13:52:43', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (4, 1, '当前用户可用的菜单', 'GET', '/menu/router', '2025-03-06 13:41:32', '2025-03-06 13:41:32', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (5, 0, '系统管理', '', '', '2025-03-06 13:38:16', '2025-03-06 13:38:16', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (6, 5, '用户管理 - 新增管理员', 'POST', '/user/add', '2025-03-06 13:39:32', '2025-03-06 13:39:32', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (7, 5, '用户管理 - 管理员列表', 'GET', '/user/list', '2025-03-06 13:39:51', '2025-03-06 13:39:51', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (8, 5, '用户管理 - 修改管理员', 'PUT', '/user/update/:id', '2025-03-06 13:40:11', '2025-03-06 13:40:11', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (9, 5, '用户管理 - 删除管理员', 'DELETE', '/user/delete/:id', '2025-03-06 13:40:27', '2025-03-06 13:40:27', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (10, 5, '菜单管理 - 菜单树', 'GET', '/menu/tree', '2025-03-06 13:41:52', '2025-03-06 13:41:52', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (11, 5, '菜单管理 - 添加菜单', 'POST', '/menu/add', '2025-03-06 13:42:07', '2025-03-06 13:42:07', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (12, 5, '菜单管理 - 修改菜单', 'PUT', '/menu/update/:id', '2025-03-06 13:42:28', '2025-03-06 13:42:28', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (13, 5, '菜单管理 - 获取菜单数据', 'GET', '/menu/info/:id', '2025-03-06 13:42:44', '2025-03-06 13:42:44', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (14, 5, '菜单管理 - 删除菜单', 'DELETE', '/menu/delete/:id', '2025-03-06 13:42:59', '2025-03-06 13:42:59', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (15, 5, '角色管理 - 新增角色', 'POST', '/role/add', '2025-03-06 13:46:01', '2025-03-06 13:46:01', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (16, 5, '角色管理 - 角色列表', 'GET', '/role/list', '2025-03-06 13:46:16', '2025-03-06 13:46:16', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (17, 5, '角色管理 - 获取角色信息', 'GET', '/role/info/:id', '2025-03-06 13:47:08', '2025-03-06 13:47:08', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (18, 5, '角色管理 - 修改角色', 'PUT', '/role/update/:id', '2025-03-06 13:47:24', '2025-03-06 13:47:24', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (19, 5, '角色管理 - 给角色分配权限', 'PUT', '/role/assign/:id', '2025-03-06 13:47:42', '2025-03-06 13:47:42', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (20, 5, '角色管理 - 删除角色', 'DELETE', '/role/delete/:id', '2025-03-06 13:47:57', '2025-03-06 13:47:57', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (21, 5, '系统API管理 - 新增接口', 'POST', '/api/add', '2025-03-06 13:48:50', '2025-03-06 13:48:50', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (22, 5, '系统API管理 - 接口列表', 'GET', '/api/list', '2025-03-06 13:49:14', '2025-03-06 13:49:14', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (23, 5, '系统API管理 - 修改接口', 'PUT', '/api/update/:id', '2025-03-06 13:50:26', '2025-03-06 13:50:26', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (24, 5, '系统API管理 - 删除接口', 'DELETE', '/api/delete/:id', '2025-03-06 13:50:42', '2025-03-06 13:50:42', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (25, 5, '系统字典管理 - 新增条目', 'POST', '/dict/add', '2025-03-06 13:51:17', '2025-03-06 13:51:17', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (26, 5, '系统字典管理 - 字典列表', 'GET', '/dict/list', '2025-03-06 13:51:31', '2025-03-06 13:51:31', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (27, 5, '系统字典管理 - 修改字典', 'PUT', '/dict/update/:id', '2025-03-06 13:51:46', '2025-03-06 13:51:46', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (28, 5, '系统字典管理 - 删除字典', 'DELETE', '/dict/delete/:id', '2025-03-06 13:52:04', '2025-03-06 13:52:04', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (29, 5, '系统日志管理 - 日志列表', 'GET', '/record/list', '2025-03-06 13:52:27', '2025-03-06 13:52:27', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (30, 5, '系统日志管理 - 日志删除', 'DELETE', '/record/delete/:id', '2025-03-06 13:52:43', '2025-03-06 13:52:43', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (31, 0, '素材管理', '', '', '2025-03-06 13:52:43', '2025-03-06 13:52:43', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (32, 31, '新增素材', 'POST', '/material/add', '2025-03-06 13:52:43', '2025-03-06 13:52:43', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (33, 31, '查询素材', 'GET', '/material/list', '2025-03-06 13:52:43', '2025-03-06 13:52:43', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (34, 31, '修改素材', 'POST', '/material/update/:id', '2025-03-06 13:52:43', '2025-03-06 13:52:43', NULL);
+INSERT INTO `sys_apis` (`id`, `parent_id`, `description`, `method`, `path`, `created_at`, `updated_at`, `deleted_at`) VALUES (35, 31, '删除素材', 'DELETE', '/material/delete/:id', '2025-03-06 13:52:43', '2025-03-06 13:52:43', NULL);
 COMMIT;
 
 -- -----------------------------
@@ -413,5 +450,23 @@ CREATE TABLE `sys_records`  (
        `deleted_at` datetime DEFAULT NULL COMMENT '删除时间',
        PRIMARY KEY (`id`)
 ) ENGINE = InnoDB COMMENT = '操作日志';
+
+-- ---------------------------------------------------
+-- Table structure for c_materials
+-- ---------------------------------------------------
+DROP TABLE IF EXISTS `c_materials`;
+CREATE TABLE `c_materials`  (
+    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键字段',
+    `name` varchar(255) NOT NULL DEFAULT '' COMMENT '素材名称',
+    `resource_url` varchar(255) NOT NULL DEFAULT '' COMMENT '素材地址',
+    `description` varchar(2500) NOT NULL DEFAULT '' COMMENT '描述',
+    `status` tinyint(1) unsigned NOT NULL DEFAULT 1 COMMENT '状态（1-显示 2-隐藏）',
+    `type` ENUM('image', 'audio', 'video') NOT NULL,
+    `created_at` datetime DEFAULT NULL COMMENT '创建时间戳',
+    `updated_at` datetime DEFAULT NULL COMMENT '修改时间戳',
+    `deleted_at` datetime DEFAULT NULL COMMENT '删除时间',
+    PRIMARY KEY (`id`),
+    KEY `idx_name` (`name`)
+) ENGINE = InnoDB COMMENT = '素材管理';
 
 SET FOREIGN_KEY_CHECKS = 1;

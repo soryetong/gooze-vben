@@ -53,6 +53,55 @@ sh ./build/scripts/start_server.sh
 
 <br>
 
+## 最新更新
+
+1. 新增了富文本编辑器，使用的是 `@wawangeditor`，用法如下：
+
+```vue
+{
+  component: 'RichEditor',
+  fieldName: 'introDetail',
+  componentProps: {
+    height: '400px',                 // 编辑器高度，默认 400px
+    placeholder: '请输入内容...',     // 占位文字，默认 '请输入内容...'
+    disabled: false,                // 是否禁用，默认 false
+  },
+}
+```
+
+2. 新增素材管理(见最后一张图)，支持图片、视频、音频、文件（即将更新），用法如下：
+
+```vue
+{
+  component: 'MaterialPicker',
+  fieldName: 'imgUrl',
+  componentProps: {
+    type: 'image',              // 素材类型：'image' | 'audio' | 'video'
+    multiple: false,            // 是否多选，默认 false
+  },
+}
+```
+
+3. 新增了 `MaterialUpload` 组件，它和 `MaterialPicker` 的区别在于，`MaterialUpload` 是上传组件，`MaterialPicker` 是选择组件，`MaterialUpload` 可以对单个素材进行控制
+
+```vue
+{
+  component: 'ImageUpload',
+  fieldName: 'image',
+  componentProps: {
+    limit: 1,           // 最大数量
+    maxSize: 500,       // 最大大小
+    sizeUnit: 'KB',     // 'KB' | 'MB'
+    accept: 'image/jpeg,image/png',
+    autoReplace: false,
+  },
+}
+```
+
+4. 修复了 「修改角色的权限后, 再次修改时, 还是显示 所有权限都勾选了」的 bug， @[issues12](https://github.com/soryetong/gooze-vben/issues/12)
+
+<br>
+
 ## 介绍
 
 > 后端介绍 [看这里](./gooze-vben-api/README.md)
@@ -108,3 +157,7 @@ sh ./build/scripts/start_server.sh
 -   操作日志
 
 ![操作日志](./images/record.png)
+
+-   素材管理
+
+![操作日志](./images/material.png)

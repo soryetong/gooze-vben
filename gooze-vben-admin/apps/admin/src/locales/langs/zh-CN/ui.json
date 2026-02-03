@@ -36,12 +36,14 @@
     "create": "创建{moduleName}",
     "update": "编辑{moduleName}",
     "delete": "删除{moduleName}",
-    "search": "搜索"
+    "search": "搜索",
+    "upload": "上传素材"
   },
   "modal": {
     "create": "创建{moduleName}",
     "update": "编辑{moduleName}",
-    "delete": "删除{moduleName}"
+    "delete": "删除{moduleName}",
+    "add": "新增{moduleName}"
   },
   "notification": {
     "create_success": "创建成功",
